@@ -1,0 +1,85 @@
+html { height: 100%; }
+
+div {
+    white-space: pre-wrap;
+}
+
+
+
+/* JetBrains Mono as font */
+
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* GLOBAL STYLES */
+body {
+    height: 100%;
+    padding-top: 30em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    color: #fff;
+    display: flex;
+    
+    font-family: 'JetBrainsMono';
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    position: relative;
+
+    animation: 
+        typing 1s steps(13),
+        blink-caret 0.9s step-end infinite;
+        /* jahrei-text-blur 1s 1.5s forwards ease,
+        jahrei-logo-unblur 1s 3s forwards ease; */
+    }
+  
+
+
+    /* The typing effect */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: white }
+    }
+
+    @keyframes jahrei-text-blur {
+        from {filter:blur(0.0px)}
+        to {filter:blur(100px)}
+    }
+
+    @keyframes jahrei-logo-unblur {
+        from {
+            filter:blur(100px)
+        }
+        to {
+            filter:blur(0px)
+        }
+    }
+
+    /* i need to add the logo png, center it, then make it disabled and then unblur after the typing text blurs */
+
+
+.bg-grad {
+    background-image: linear-gradient(45deg, black, #0f0f0f);
+    background-attachment: fixed;
+    width: auto;
+    height: 100%;
+}
