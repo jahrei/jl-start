@@ -39,7 +39,7 @@ body {
 
     animation: 
         typing 1s steps(13),
-        blink-caret 0.9s step-end infinite;
+        blink-caret 0.9s step-end infinite
         /* jahrei-text-blur 1s 1.5s forwards ease,
         jahrei-logo-unblur 1s 3s forwards ease; */
     }
