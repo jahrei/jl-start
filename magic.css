@@ -18,10 +18,20 @@ div {
 /* GLOBAL STYLES */
 body {
     height: 100%;
-    padding-top: 30em;
+    padding-top: 45vh;
     margin: 0;
     display: flex;
     justify-content: center;
+}
+
+
+.martian-mono-normal {
+    font-family: "Martian Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
 }
 
 /* DEMO-SPECIFIC STYLES */
@@ -29,17 +39,17 @@ body {
     color: #fff;
     display: flex;
     
-    font-family: 'Space mono';
+    font-family: 'Martian Mono';
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .10em solid white; /* The typwriter cursor */
+    border-right: .1em solid white; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .09em; /* Adjust as needed */
+    letter-spacing: .14em; /* Adjust as needed */
     position: relative;
 
     animation: 
-        typing 1s steps(13),
-        blink-caret 0.9s step-end infinite
+        typing 1s steps(12),
+        blink-caret 0.7s step-end infinite;
         /* jahrei-text-blur 1s 1.5s forwards ease,
         jahrei-logo-unblur 1s 3s forwards ease; */
     }
