@@ -1,2 +1,7 @@
 # firefox_start_page
-dnkf kdsgwbkjgjeb;w 
+a personal startup page for my firefox (and chrome)
+
+
+(requires an extension on firefox)
+
+
