@@ -15,13 +15,23 @@ div {
 }
 
 /* GLOBAL STYLES */
-body {
+/* body {
     height: 100%;
     padding-top: 45vh;
     margin: 0;
     display: flex;
     justify-content: center;
-}
+} */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Set position to relative to contain absolutely positioned elements */
+  }
 
 
 .martian-mono-normal {
@@ -33,10 +43,28 @@ body {
       "wdth" 100;
 }
 
-/* DEMO-SPECIFIC STYLES */
+/* Centering and rotation for inline SVG background */
+.inline-svg {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-15deg); /* Center and rotate */
+    width: 100vw; /* Scale to 100% of the viewport width */
+    height: 100vh; /* Scale to 100% of the viewport height */
+    z-index: -1; /* Ensure the background stays behind other content */
+    opacity: 0; /* Initially hidden */
+    animation: fade-in 1s forwards, scroll 30s infinite alternate; /* Fade in animation */
+    animation-delay: 1.5s; /* Delay the fade-in animation by 2 seconds */
+}
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
 .typewriter h1 {
     color: #fff;
-    display: flex;
     font-family: 'Martian Mono';
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .1em solid white; /* The typewriter cursor */
@@ -61,6 +89,29 @@ body {
     50% { border-color: white }
 }
 
+/* Background animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .25;
+    }
+}
+
+/* Scroll back and forth effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100px); /* Scroll left */
+    }
+    100% {
+        transform: translateX(100px); /* Scroll right */
+    }
+}
+
 .bg-grad {
     background-image: linear-gradient(45deg, black, #0f0f0f) ;
     background-attachment: fixed;
@@ -73,28 +124,30 @@ body {
     display: flex;
 }
 
-/* Logo PNG styling */
+/* Logo PNG styling
 .logo {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     filter: blur(100px); /* Initially blurred */
-    pointer-events: none; /* Disable pointer events */
-}
+    /* pointer-events: none; /* Disable pointer events 
+}   */
 
-/* SVG animation */
+
+/* SVG animation
 .svg-container {
     position: relative;
 }
 
 .svg-container svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
     background-color: clear;
-}
+} */
 
 .path {
     animation: draw 20s infinite;
@@ -114,3 +167,5 @@ body {
         stroke-opacity: 1;
     }
 }
+
+
