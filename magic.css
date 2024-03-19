@@ -50,7 +50,7 @@ body {
     animation: 
         typing 1s steps(12),
         blink-caret 0.7s step-end infinite;
-        /* jahrei-text-blur 1s 1.5s forwards ease,
+        /* jahrei-text-blur 1s 1.5s forwards ease;
         jahrei-logo-unblur 1s 3s forwards ease; */
     }
   
