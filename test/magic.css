@@ -1,0 +1,116 @@
+div {
+    white-space: pre-wrap;
+}
+
+
+
+/* JetBrains Mono as font */
+
+@font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* GLOBAL STYLES */
+body {
+    height: 100%;
+    padding-top: 45vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.martian-mono-normal {
+    font-family: "Martian Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    color: #fff;
+    display: flex;
+    font-family: 'Martian Mono';
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid white; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .14em; /* Adjust as needed */
+    position: relative;
+    animation: 
+        typing 1s steps(12),
+        blink-caret 0.7s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+.bg-grad {
+    background-image: linear-gradient(45deg, black, #0f0f0f) ;
+    background-attachment: fixed;
+    width: auto;
+    height: 100%;
+}
+
+body {
+    background-color: clear;
+    display: flex;
+}
+
+/* Logo PNG styling */
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(100px); /* Initially blurred */
+    pointer-events: none; /* Disable pointer events */
+}
+
+/* SVG animation */
+.svg-container {
+    position: relative;
+}
+
+.svg-container svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: clear;
+}
+
+.path {
+    animation: draw 20s infinite;
+    animation-timing-function: linear;
+}
+
+.path-01 { animation-delay: 0s; }
+.path-02 { animation-delay: 1s; }
+.path-03 { animation-delay: 2s; }
+.path-04 { animation-delay: 3s; }
+.path-05 { animation-delay: 4s; }
+
+@keyframes draw {
+    0% { }
+    100% {
+        stroke-dashoffset: 0;
+        stroke-opacity: 1;
+    }
+}
