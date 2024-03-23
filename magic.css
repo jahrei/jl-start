@@ -52,7 +52,7 @@ body {
 .inline-svg {
     position: absolute;
     transform: rotate(90deg);
-    width: 500vw; 
+    width: 600vw; 
     height: 100vh; 
     z-index: -1; 
     opacity: 0; 
@@ -67,7 +67,7 @@ body {
         opacity: 0;
     }
     to {
-        opacity: .26;
+        opacity: .13;
     }
 }
 
@@ -112,6 +112,50 @@ body {
     min-height: 100vh;
 }
 
+/* Matrix Rain */
+#Matrix {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: -4;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    animation: faydeIn 2s forwards; 
+    animation-delay: 1s
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    opacity: 0; /* Initially set opacity to 0 */
+}
+
+@keyframes faydeIn {
+    from {
+        opacity: 0; /* Start opacity from 0 */
+    }
+    to {
+        opacity: 0.1; /* End opacity at 1 */
+    }
+}
+
+
+
+.matrix-rain {
+    background: transparent;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity:0.2;
+    transform: translate(-50%, -50%);
+    z-index: -4; /* Set a lower z-index to send it to the back */
+  }
 
 /* "jahrei labs." TEXT */
 .typewriter h1 {
