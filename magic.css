@@ -46,7 +46,15 @@ body {
     font-style: normal;
 }
 
-
+@font-face {
+    font-family: 'FreeMono';
+    font-style: normal;
+    font-weight: 400;
+    src: 
+       local('FreeMono'), 
+       url('https://fonts.cdnfonts.com/s/16387/FreeMono.woff') format('woff');
+  }
+  
 
 /* CIRCUIT BACKGROUND */
 .inline-svg {
@@ -160,7 +168,7 @@ body {
 /* "jahrei labs." TEXT */
 .typewriter h1 {
     color: #fff;
-    font-family: 'Martian Mono'; /* "Major Mono Display"; "Fragment Mono"; */
+    font-family: 'FreeMono'; /* "Major Mono Display"; "Fragment Mono"; */
     overflow: hidden; 
     border-right: .07em solid white; /* The typewriter cursor */
     white-space: nowrap; 
@@ -168,7 +176,7 @@ body {
     letter-spacing: .10em; 
     position: relative;
     animation: 
-        typing 1.2s steps(12),
+        typing 1.2s steps(5),
         blink-caret 0.7s step-end infinite;
 
 }
