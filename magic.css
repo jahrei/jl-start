@@ -173,7 +173,7 @@ body {
     border-right: .07em solid white; /* The typewriter cursor */
     white-space: nowrap; 
     margin: 0 auto; 
-    letter-spacing: .10em; 
+    letter-spacing: 0em; 
     position: relative;
     animation: 
         typing 1.2s steps(5),
